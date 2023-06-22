@@ -1,38 +1,21 @@
-import React, { Component } from 'react'
-import ProductCard from './ProductCard'
+/** @format */
 
-export default class Productsection extends Component {
-  state = {
-    products: []
-  }
+import { useSelector } from "react-redux";
+import ProductCard from "./ProductCard";
 
-
-  componentDidMount() {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(json => this.setState({ products: json }))
-  }
-  render() {
-    return (
-      <>
-        <div className="container">
-          <div className="row g-2">
-            {this.state.products.map((product) =>
-              <div key={product.id} className="col -md-6 col -lg-4 ">
-                <ProductCard
-                 id={product.id}
-                  image={product.image}
-                  title={product.title}
-                  desc={product.desc}
-                  price={product.price} /></div>
-            )}
-
-
-          </div>
+export default function ProductSection() {
+  const products = useSelector((state) => state.products.arrWithCount);
+  return (
+    <>
+      <div className="container py-5">
+        <div className="row g-2 ">
+          {products?.map((product) => (
+            <div key={product.id} className="col-md-6 col-lg-4 ">
+              <ProductCard product={product} />
+            </div>
+          ))}
         </div>
-
-      </>
-
-    )
-  }
+      </div>
+    </>
+  );
 }

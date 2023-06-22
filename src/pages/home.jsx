@@ -5,7 +5,9 @@ export default function home() {
   return (
     <>
     <Myslider/>
-     <Mycard/>
+    <br /> <br /> <br />
+    Welcome to hoem Page ....
+    <br /> <br /> <br />
     </>
   )
 }
