@@ -2,7 +2,7 @@ import React, {useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
-import { productsContext } from '../context/cart';
+import { Image } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
  
 import { decCartCount, incCartCount } from '../Redux/Slices/cartCounterSlice';
@@ -31,11 +31,14 @@ export default function ProductCard({
   const navigateToDetails = (id) => {
     navigate(`${id}`);
   };
-
+  // src={image} onClick={() => navigateToDetails(id)} 
   return (
     <Card className="h-100 w-100">
       <Link to={`/store/${id}`} style={{ textDecoration: 'none' }}>
-        <Card.Img src={image}     onClick={() => navigateToDetails(id)} />
+      <div className="d-flex justify-content-center">
+      <Image src={image} onClick={() => navigateToDetails(id)}  alt="Responsive image" fluid style={{ maxHeight: '300px' ,minHeight:'300px' }} />
+    </div>
+       
       </Link>
       <Card.Body className="d-flex flex-column justify-content-between">
         <Card.Title className="h-100">

@@ -10,7 +10,7 @@ function ColorSchemesExample() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-          <FaReact />  Store 
+          <FaReact style={{ fontSize: '3em' }} />  Store 
           </a>
           {cartCount}
           <button

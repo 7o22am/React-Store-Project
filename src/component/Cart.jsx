@@ -11,10 +11,16 @@ export default function Cart() {
     setCartItems(data);
   }, [arrWithCount]);
   return (
-    <div>
-      {cartItems.map((item) => (
-        <ProductCard key={item.id} product={item} />
+    <div className="container py-5">
+        <div className="row g-2 ">
+            {cartItems.map((item) => (
+        <div className=" col-md-6 col-lg-4  d-flex" >
+       <ProductCard key={item.id} product={item}   />
+        </div>
+      
       ))}
+        </div>
+    
     </div>
   );
 }
