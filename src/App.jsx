@@ -35,7 +35,7 @@ function App() {
         <Route path='/store' element={<Store />}></Route>
         <Route path='/store/:id' element={<ProductsDet />}></Route>
         <Route path='/students' element={<Students />}></Route>
-        <Route path='*' element={<div className='d-flex justify-content-center   '> not Found 404 erorr</div>}></Route>
+        <Route path='*' element={<div className='d-flex justify-content-center'> not Found 404 erorr</div>}></Route>
       </Routes>
       <Myfooter />
  

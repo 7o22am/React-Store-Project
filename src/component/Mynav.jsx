@@ -7,10 +7,10 @@ function ColorSchemesExample() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+        <div className="container-fluid ">
           <a className="navbar-brand" href="#">
-          <FaReact style={{ fontSize: '3em' }} />  Store 
+          <FaReact style={{ fontSize: '3em' }} />  MyStore 
           </a>
           {cartCount}
           <button
@@ -31,11 +31,7 @@ function ColorSchemesExample() {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
-                  Login
-                </NavLink>
-              </li>
+             
               <li className="nav-item">
                 <NavLink className="nav-link" to="/store">
                   Store
@@ -49,6 +45,11 @@ function ColorSchemesExample() {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/students">
                   Students
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/login">
+                  Login
                 </NavLink>
               </li>
             </ul>
